@@ -1,5 +1,6 @@
 package com.tucucha.exposicionandroid
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.ArrayAdapter
@@ -32,7 +33,11 @@ class Widgets: AppCompatActivity() {
         val Spiner = binding.spinnerSexo
         Spiner.adapter = adaptadorSex
 
-
+        val boton=binding.botoncito
+        boton.setOnClickListener {
+            val intent = Intent(this, Stratify::class.java)
+            startActivity(intent)
+        }
 
     }
 }
